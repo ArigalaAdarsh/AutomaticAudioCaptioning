@@ -168,7 +168,7 @@ python main.py --exp <exp_name> --dataset_name <dataset_name> --dataset_path <pa
 
 ## Evaluation with Pre-trained Weights
 
-1. Download pre-trained weights from [drive](https://doi.org/10.5281/zenodo.7688773).  
+1. Download pre-trained weights from [drive](#).  
 2. Place the weights in the respective folders `outputs/<exp_name>_out/`.   `exp_name : Clotho`  and  `exp_name : Audiocaps` 
 3. Set the workflow in `dcb.yaml`:
 
