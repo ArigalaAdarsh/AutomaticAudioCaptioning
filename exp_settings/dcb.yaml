@@ -1,0 +1,67 @@
+adapt:
+  audio_emb_size: 768 
+  nb_layers: 1
+data:
+  dataset: Clotho
+  root_dir: "./data_32k_224_mels"   #"./Audiocaps"
+  max_audio_len: 4096  
+  max_caption_tok_len: 64
+lm:
+  audio_enc_path: "./convnext/convnext_tiny_471mAP.pth"
+  freeze_audio_enc: false #true 
+  config: # Model parameters
+    activation_dropout: 0.1
+    activation_function: 'gelu'
+    attention_dropout: 0.1
+    classifier_dropout: 0.0
+    d_model: 768
+    decoder_attention_heads: 8  
+    decoder_ffn_dim: 2048 
+    decoder_layers: 3  
+    dropout: 0.1
+    encoder_attention_heads: 8  
+    encoder_ffn_dim: 2048  
+    encoder_layers: 3 
+    vocab_size: 50265
+    custom_vocab_size: 5965  
+    freeze_token_embedding: false
+  generation: # Generation parameters
+    early_stopping: true
+    no_repeat_ngram_size: 3
+    num_beams: 4
+    min_length: 5
+    max_length: 100
+    length_penalty: 1.0
+    decoding: beam
+  eval_model: best
+  eval_checkpoint: 0
+  freeze:
+    all: false
+    attn: false
+    dec: false
+    dec_attn: false
+    dec_mlp: false
+    dec_self_attn: false
+    enc: false
+    enc_attn: false
+    enc_mlp: false
+    mlp: false
+  tokenizer: facebook/bart-base #../custom_BART_config # here custom bart tokenizer we prepared based on the clotho dataset captions
+  pretrained: null #facebook/bart-base 
+training:
+  eval_steps: 1000
+  force_cpu: false
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  num_workers: 8
+  lr: 1.0e-05
+  nb_epochs: 20
+  save_steps: 1000 
+  seed: 0
+evaluation:
+  batch_size: 5  
+workflow:
+  train: true
+  validate: true
+  evaluate: true
+  
