@@ -1,7 +1,9 @@
 # Lightweight Model for Automatic Audio Captioning (ICASSP 2026 Submission)
 
 This repository provides the **official implementation** of our lightweight model for **Automatic Audio Captioning (AAC)**, submitted to **ICASSP 2026**.  
-It includes training, evaluation, and caption generation code for the **Clotho** and **AudioCaps** datasets, with support for **ConvNeXt-based audio encoders** and **BART-based decoders**.
+It includes training, evaluation, and caption generation code for the **Clotho** and **AudioCaps** datasets, with support for **ConvNeXt-based audio encoders** and **BART-based decoders**.  
+
+> **Note:** Pretrained model weights will be released later to reproduce the results.
 
 
 ## Table of Contents
