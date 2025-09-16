@@ -57,8 +57,8 @@ pip install -r requirements.txt
 1. Clone the repository:
 
 ```bash
-git clone  
-cd AutomaticAudioCaptioning
+git clone https://github.com/ArigalaAdarsh/Enhancing-AAC-AudioSet-Semantics.git 
+cd Enhancing-AAC-AudioSet-Semantics
 ```
 
 2. Load the ConvNeXt checkpoint for the audio encoder (trained on the AudioSet2M). Download `convnext_tiny_471mAP.pth` from [Zenodo](https://zenodo.org/records/8020843) and place it in the `convnext` folder.  
