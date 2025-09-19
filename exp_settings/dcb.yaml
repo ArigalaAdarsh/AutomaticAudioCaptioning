@@ -46,7 +46,7 @@ lm:
     enc_attn: false
     enc_mlp: false
     mlp: false
-  tokenizer: facebook/bart-base #../custom_BART_config # here custom bart tokenizer we prepared based on the clotho dataset captions
+  tokenizer: facebook/bart-base 
   pretrained: null #facebook/bart-base 
 training:
   eval_steps: 1000
