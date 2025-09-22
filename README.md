@@ -161,9 +161,14 @@ python audio_logmel_audiocaps.py
 ```bash
 python main.py --exp <exp_name> --dataset_name <dataset_name> --dataset_path <path_to_data>    
 ```
-- `dataset_name :Clotho` `path_to_data: data_32k_224_mels`
+- For Clotho training `dataset_name :Clotho` `path_to_data: data_32k_224_mels`
 - After training, model weights are saved in `outputs/<exp_name>_out/`.
 
+- For Audiocaps training `dataset_name: Audiocaps` and  `dataset_path: Audiocaps`
+
+```bash
+python main.py --exp <exp_name> --dataset_name <dataset_name> --dataset_path <path_to_data>
+``` 
 ---
 
 ## Evaluation with Pre-trained Weights
